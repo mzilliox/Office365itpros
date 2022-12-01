@@ -548,7 +548,7 @@ $htmltail = "<p>Report created for: " + $OrgName + "
              "<p>Microsoft 365 Groups and Teams Activity Report <b>" + $Version + "</b>"	
 $htmlreport = $htmlhead + $htmlbody + $htmltail
 $htmlreport | Out-File $ReportFile  -Encoding UTF8
-$Report | Export-CSV -NoTypeInformation $CSVFile
+$Report | Export-CSV -NoTypeInformation $CSVFile -Encoding UTF8
 $Report | Out-GridView
 # Summary note
 CLS
